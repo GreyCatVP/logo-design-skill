@@ -28,3 +28,5 @@ jobs:
           python-version: ${{ matrix.python }}
       - name: Run the skill's scripts end to end
         run: python tools/smoke_test.py
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
